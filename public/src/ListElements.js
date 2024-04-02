@@ -24,7 +24,7 @@ function ListElements() {
     });
   };
 
-  return { nombreNuevo, elementos, setNombreNuevo, handleSubmit };
+  return {elementos, setNombreNuevo, handleSubmit };
 }
 
 export default ListElements;

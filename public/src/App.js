@@ -3,7 +3,7 @@ import ListElements from './ListElements'
 import CreateNewElement from './CreateNewElement'
 
 function App() {
-  const { nombreNuevo, elementos, setNombreNuevo, handleSubmit } = ListElements();
+  const {elementos, setNombreNuevo, handleSubmit } = ListElements();
 
   return (
       <><header className="bg-dark text-white">
@@ -25,7 +25,7 @@ function App() {
               <h1>Agregar Nuevo Elemento</h1>
               <form className="row g-2 py-2" onSubmit={handleSubmit}>
                 <label className="fw-bold" htmlFor="nombreNuevo">Nombre: </label>
-                <input type="text" className="form-control" id="nombreNuevo" name="nombreNuevo" required value={nombreNuevo} onChange={(e) => setNombreNuevo(e.target.value)} />
+                <input type="text" className="form-control" id="nombreNuevo" name="nombreNuevo" onChange={(e) => setNombreNuevo(e.target.value)} />
 
                 <button type="submit" className="btn btn-primary">Agregar</button>
               </form>
@@ -34,7 +34,7 @@ function App() {
         </div>
 
         <div className="row">
-          {elementos.map((peleador) => <CreateNewElement peleador={peleador}/>)}
+          {elementos.map((peleador) => <CreateNewElement key={peleador.id} peleador={peleador}/>)}
         </div>
       </div>
     </main>
