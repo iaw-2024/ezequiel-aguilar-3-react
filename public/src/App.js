@@ -39,6 +39,7 @@ function App() {
       </div>
     </main>
     
+    
     <footer className="bg-dark text-white text-center py-2">
       <p>&copy; 2023 Listado de Elementos</p>
     </footer></>
