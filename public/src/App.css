@@ -1,5 +1,0 @@
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Esto asegura que el cuerpo ocupe al menos el 100% del alto de la ventana */
-}
