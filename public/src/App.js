@@ -17,7 +17,7 @@ function App() {
       <div className="bg-danger text-white text-center py-3 h1">UFC</div>
     </header>
     
-    <main className="h-100 flex-grow-1 bg-secondary">
+    <main className="flex-grow-1 bg-secondary">
       <div className="container-fluid py-5">
         <div className="row" id="filaContenedor">
           <div className="col-12">
