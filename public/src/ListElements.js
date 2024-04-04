@@ -16,7 +16,16 @@ function ListElements() {
     })
     .then(response => response.json())
     .then(data => {
-      setElementos(prevElementos => [...prevElementos, data]);
+      setElementos(prevElementos => {
+        // Verificar si el elemento ya existe en el arreglo
+        if (!prevElementos.includes(data)) {
+          // Si no existe, agregarlo al arreglo
+          return [...prevElementos, data];
+        } else {
+          // Si ya existe, devolver el arreglo sin modificar
+          return prevElementos;
+        }
+      });
       setNombreNuevo('');
     })
     .catch(error => {
